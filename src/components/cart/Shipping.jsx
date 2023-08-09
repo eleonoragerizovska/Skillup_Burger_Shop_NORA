@@ -17,12 +17,14 @@ const Shipping = () => {
             <input type="text" placeholder="Enter City" />
           </div>
           <div>
-              {/* Compelte the code for the COUNTRY DROPDOWN*/}
+              {/* COUNTRY DROPDOWN*/}
             <label>Country</label>
 
             <select>
               <option value="">Country</option>
-// Enter the code here for country dropdown           
+{Country && Country.getAllCountries().map((i) => ( 
+  <option value="{i.isoCode}" key="{i.isoCode}">
+{i.name}
                   </option>
                 ))}
             </select>
